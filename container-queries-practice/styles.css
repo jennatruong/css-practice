@@ -1,0 +1,21 @@
+.btn.btn-outline:hover, .btn.btn-outline:focus {
+    background: hsl(200, 50%, 90%);
+}
+
+.btn + .btn {
+    margin-left: .25rem;
+}
+
+p {
+    font-size: x-large;
+}
+
+@media (max-width: 800px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card-header {
+        width: 100%
+    }
+}
