@@ -1,4 +1,4 @@
-.btn.btn-outline:hover, .btn.btn-outline:focus {
+.btn .btn-outline:hover, .btn.btn-outline:focus {
     background: hsl(200, 50%, 90%);
 }
 
@@ -6,11 +6,12 @@
     margin-left: .25rem;
 }
 
-p {
-    font-size: x-large;
+main, .sidebar {
+    /* note: 2 different types of containers - size & inline-size; */
+    container-type: inline-size;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 80px) {
     .card {
         flex-direction: column;
     }
