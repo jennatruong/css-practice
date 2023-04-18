@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+/* SELECTORS */
+    /* UNIVERSAL SELECTOR "*" - select literally everything: */
+        /* * {
+            background: red;
+        } */
+
+
+    /* TYPE SELECTORS: */
+        /* div {
+            background: red;
+        }
+        span {
+            background: blue;
+        } */
+
+
+    /* CLASS SELECTORS: */
+        /* .green {
+            background: green;
+        } */
+
+         /* also id selectors - not as usefull - only can select one per page */
+
+    /* COMBINE SELECTORS */
+        /* i.e. CLASS + TYPE SELECTORS: */
+        /* div.red {
+            background: red;
+        } */
+
+        /* span, li.green {
+            background: green;
+        } */
+
+    /* HOW TO GET ALL SELECTORS WITHIN ANOTHER SELECTOR - a space between them:*/
+        /* ul li {
+            background: blue;
+        } */
+
+        /* div b {
+            background: blue;
+        } */
+
+        /* This will only work if b is the direct child of the div: */
+        /* div > b {
+            background: blue;
+        } */
+
+    /* SUDO CLASSES - based on how user interacts with page */
+
+        li:hover {
+            background-color: red;
+        }
+        /* turns red when clicked on: */
+        input:focus {
+            background-color: red;
+        }
+        /* adds margin to a checkbox when checked: */
+        input:checked {
+            margin: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <input type="text">
+    <div class="red">This is a div</div>
+    <div class="not-red">This is another div</div>
+    <span>This is a span</span>
+    <div>
+        <span>
+            <b>nested text</b>
+        </span>
+    </div>
+    <ul>
+        <li class="green">Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</body>
+</html>
