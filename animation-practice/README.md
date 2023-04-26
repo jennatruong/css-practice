@@ -1,0 +1,1 @@
+tutorial followed from Learn CSS Animation in 15 minutes (Web Dev Simplified) - Youtube
