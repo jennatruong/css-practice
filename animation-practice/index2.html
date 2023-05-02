@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent {
+            background-color: hsla(200, 100%, 20%);
+            height: 400px;
+            width: 400px;
+        }
+
+        /* ANIMATAION EXAMPLE: */
+        .child  {
+            background-color: red;
+            height: 50%;
+            width: 50%;
+        }
+
+        .parent:hover .child {
+            /* NOTE: other option is "paused" to pause the animation */
+            animation-play-state: running;
+            /* NOTE: Animation - write this out on the element you want it to happen on: */
+            /* NOTE: Animation needs a name - this is the "left-to-right" below:  */
+            /* NOTE: forwards (aka animation fill mode) means after animation is done keep all properties in 100% keyframe */
+            animation: left-to-right 1s ease-in-out forwards infinite alternate;
+        }
+
+        /* NOTE: put the key frame outside of any selector */
+        /* NOTE: to link to animation, format is @keyframes, then the animation name (i.e. left-to-right) */
+        @keyframes left-to-right {
+            /* NOTE: this is what it should look like at 100% (otherwise it will default to the child) */
+            0% {
+                transform: translateX(0);
+            }
+            33% {
+                transform: translateY(100%);
+            }
+            50% {
+                background-color: blue;
+            }
+            66% {
+                transform: translateY(100%) translateX(100%);
+            }
+            100% {
+                transform: translateX(100%);
+                background-color: green;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

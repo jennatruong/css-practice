@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> -->
     <style>
         .parent {
             background-color: hsla(200, 100%, 20%);
@@ -12,14 +8,28 @@
             width: 400px;
         }
 
+        /* Transition Example: */
         .child  {
             background-color: red;
             height: 50%;
             width: 50%;
+            /* NOTE: putting the transition on the child instead of on the .parent:hover
+            because this would be immediately removed when you stop hovering. 
+            Here we can do it smoothly */
+            /* NOTE: typically just use "transition" - this combines transition-delay, 
+            duration, property & timing-function into one 
+            put the transition on the BASE class (i.e. child) and not on the actual modified class (i.e. hover)*/
+            transition: transform 1s linear;
+            /* this speeds up in the middle, slows down at the start/end: */
+            transition: transform 1s ease-in-out;
         }
 
         .parent:hover .child {
+            /* This moves the child box to the opposite side of the parent when hovering: */
+            /* This is jumpy though so a transition or animation is better */
             transform: translateX(100%);
+            background-color: green;
+            /* Animation - write this out on the element you want it to happen on: */
         }
 
     </style>
